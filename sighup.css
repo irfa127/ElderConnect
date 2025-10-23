@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: beige;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+
+.signup-card,
+.signin-card {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.image-section {
+  flex: 1;
+  min-height: 400px;
+  background: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.image-section img {
+  max-width: 110%;
+
+  border-radius: 12px;
+
+}
+
+
+.signup-form,
+.signin-form {
+  flex: 1;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.signup-form h2,
+.signin-form h2 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.signup-form input,
+.signin-form input,
+.signup-form select,
+.signin-form select {
+  padding: 14px;
+  border: 1px solid #1e1d1d;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+ 
+}
+
+.signup-form input:focus,
+.signin-form input:focus,
+.signup-form select:focus,
+.signin-form select:focus {
+  border-color: #676d94;
+  box-shadow: 0 0 0 2px rgba(157, 190, 205, 0.2);
+}
+
+.signup-form button,
+.signin-form button {
+  padding: 14px;
+  background: #4eb58a;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.signup-form button:hover,
+.signin-form button:hover {
+  opacity: 0.9;
+}
+
+/* Support both link classes */
+.signin-link,
+.signup-link {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.signin-link a,
+.signup-link a {
+  color: #2f92c8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signin-link a:hover,
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .signup-card,
+  .signin-card {
+    flex-direction: column;
+  }
+
+  .image-section {
+    min-height: 250px;
+  }
+}
