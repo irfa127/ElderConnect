@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Caregiver | ElderConnect</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style/bookin2.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h1>Elder<span>Connect</span></h1>
+      <ul class="nav-links">
+        <li>
+          <a href="Home.html"><i class="fa-solid fa-house"></i>Home</a>
+        </li>
+        <li>
+          <a href="BookCaregiver.html" class="active"
+            ><i class="fa-solid fa-user-nurse"></i>Book Caregiver</a
+          >
+        </li>
+        <li>
+          <a href="Oldage.html"
+            ><i class="fa-solid fa-building"></i>Old Age Homes</a
+          >
+        </li>
+        <li>
+          <a href="Consoltion.html"
+            ><i class="fa-solid fa-comments"></i>Consultation</a
+          >
+        </li>
+        <li>
+          <a href="Profile.html"><i class="fa-solid fa-user"></i>Profile</a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="booking-container">
+        <!-- Caregiver Card -->
+        <div class="caregiver-card">
+          <div class="caregiver-img">
+            <img
+              src="https://images.unsplash.com/photo-1734002886107-168181bcd6a1?auto=format&fit=crop&q=80&w=687"
+              alt="Caregiver Fathima"
+            />
+          </div>
+          <h2 class="caregiver-name">Fathima</h2>
+          <div class="caregiver-exp">8 years experience</div>
+          <div class="caregiver-rating">★★★★★ (42 reviews)</div>
+          <p class="caregiver-desc">
+            Compassionate caregiver specializing in dementia care and daily
+            assistance. Certified in elderly nutrition and mobility support.
+          </p>
+          <div class="caregiver-features">
+            <span class="feature">Dementia Care</span>
+            <span class="feature">Mobility Support</span>
+            <span class="feature">Medication Management</span>
+            <span class="feature">Meal Preparation</span>
+          </div>
+        </div>
+
+        <!-- Booking Form -->
+        <div class="booking-form">
+          <h1 class="form-title">Book Your Caregiver</h1>
+          <form>
+            <div class="form-group">
+              <label>Your Full Name</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <div class="form-group form-half">
+                <label>Phone Number</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  placeholder="Enter phone number"
+                  required
+                />
+              </div>
+              <div class="form-group form-half">
+                <label>Email Address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Enter email"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Type of Care Needed</label>
+              <select class="form-control" required>
+                <option value="">Select service</option>
+                <option>Daily Assistance</option>
+                <option>Medical Care</option>
+                <option>Companionship Only</option>
+                <option>Post-Surgery Care</option>
+                <option>Dementia Care</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <div class="form-group form-half">
+                <label>Start Date</label>
+                <input type="date" class="form-control" required />
+              </div>
+              <div class="form-group form-half">
+                <label>Duration</label>
+                <select class="form-control" required>
+                  <option>Select duration</option>
+                  <option>1 Week</option>
+                  <option>2 Weeks</option>
+                  <option>1 Month</option>
+                  <option>3 Months</option>
+                  <option>Ongoing</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Hours Needed Per Day</label>
+              <select class="form-control" required>
+                <option>Select hours</option>
+                <option>4 Hours</option>
+                <option>8 Hours</option>
+                <option>12 Hours</option>
+                <option>24 Hours (Live-in)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Special Requests or Conditions</label>
+              <textarea
+                class="form-control"
+                placeholder="Any specific needs or preferences?"
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label>Address for Service</label>
+              <textarea
+                class="form-control"
+                placeholder="Full address"
+                required
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <input type="checkbox" id="terms" required />
+              <label for="terms">I agree to the terms and conditions</label>
+            </div>
+            <button type="submit" class="submit-btn"> <a href="../pages/payment.html" style="text-decoration: none; color: #ffff;">Confirm Booking</a></button>
+          </form>
+        </div>
+      </div>
+  </body>
+</html>

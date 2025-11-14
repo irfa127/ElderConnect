@@ -1,0 +1,401 @@
+
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+      :root {
+        --primary: #5dbd73;
+        --text-dark: #2c3e50;
+        --text-gray: #555;
+        --bg-light: #f9fafb;
+        --white: #ffffff;
+        --shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        color: var(--text-dark);
+        display: flex;
+        min-height: 100vh;
+      }
+
+      /* === Sidebar === */
+      .sidebar {
+        width: 240px;
+        background: rgb(234, 240, 241);
+        box-shadow: 2px 5px 2px 1px rgb(171, 201, 183);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        padding: 20px;
+      }
+
+      .sidebar h1 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+        color: var(--text-dark);
+      }
+
+      .sidebar h1::first-letter {
+        color: var(--primary);
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .nav-links li a {
+        text-decoration: none;
+        color: var(--text-gray);
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transition: 0.3s;
+        padding: 10px;
+        border-radius: 10px;
+      }
+
+      .nav-links li a:hover {
+        color: var(--primary);
+        background-color: #eaf7ec;
+      }
+
+      .sidebar-footer {
+        font-size: 0.9rem;
+        color: var(--text-gray);
+        text-align: center;
+        padding-top: 10px;
+      }
+
+      /* === Main Content === */
+      .main-content {
+        margin-left: 260px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .Two {
+        display: flex;
+        /* flex-wrap: wrap; */
+        justify-content: space-around;
+        align-items: center;
+        padding: 35px;
+        text-align: center;
+      }
+
+      .cargivers {
+        font-weight: 800;
+        font-size: 1.3rem;
+      }
+
+      .search {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 400px;
+      }
+
+      .search input {
+        width: 100%;
+        padding: 15px 50px;
+        border-radius: 50px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+      }
+
+      .search i {
+        position: absolute;
+        left: 20px;
+        font-size: 20px;
+        color: #555;
+      }
+
+      .caregivers-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 40px 20px;
+      }
+
+      .card {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background: var(--white);
+        border-radius: 20px;
+        box-shadow: var(--shadow);
+        max-width: 1000px;
+        width: 90%;
+        padding: 30px;
+        flex-wrap: wrap;
+        transition: transform 0.3s ease;
+      }
+
+      .card:nth-child(odd) {
+        flex-direction: row-reverse;
+      }
+
+      .card:hover {
+        transform: translateY(-20px);
+      }
+
+      .card img {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 20px;
+      }
+
+      .card .text {
+        max-width: 500px;
+      }
+
+      .card .text h1 {
+        margin-bottom: 10px;
+        color: var(--text-dark);
+      }
+
+      .card p {
+        color: var(--text-gray);
+        margin: 15px 0;
+      }
+
+      button {
+        background-color: var(--primary);
+       
+        padding: 10px 20px;
+       
+        border-radius: 25px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s;
+        border: 3px double green;
+        background-color: #ffff; 
+      }
+
+      button:hover {
+        background-color: green;
+
+      }
+      button a{
+        color: #46cd34;
+        text-decoration: none;
+      }
+      button a:hover{
+        color: #ffff;
+       
+      }
+
+      .stars {
+        color: gold;
+        font-size: 1.5rem;
+        margin-top: 8px;
+      }
+
+       footer {
+  position: relative;
+  padding: 80px 20px 40px;
+  color: green;
+  text-align: center;
+ 
+  margin-top: 60px;
+}
+
+.footer-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.footer-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.12;
+}
+
+.footer-content {
+  position: relative;
+  z-index: 2;
+}
+
+footer h1 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: green;
+}
+
+.cta-btn {
+  background: green;
+  color: white;
+  padding: 14px 36px;
+  border: none;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  margin-bottom: 30px;
+  transition: 0.3s ease;
+  font-weight: bold;
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  margin: 30px 0;
+}
+
+.footer-links li a {
+  text-decoration: none;
+  color:green;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.footer-links li a:hover {
+  color:black;
+}
+
+.footer-contact p {
+  margin: 8px 0;
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.copyright {
+  margin-top: 30px;
+  opacity: 0.8;
+  font-size: 0.9rem;
+  color: green;
+}
+     /* ===============================
+   MOBILE + TABLET RESPONSIVE
+   (max-width: 768px)
+================================ */
+@media (max-width: 768px) {
+
+  /* Sidebar moves to TOP */
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    z-index: 999;
+  }
+
+  /* Sidebar title smaller */
+  .sidebar h1 {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+  }
+
+  /* Nav links horizontally arranged */
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    
+  }
+
+  .nav-links li a {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+
+  /* Main content fixes */
+  .main-content {
+    margin-left: 0;
+    margin-top: 130%; /* space for top navbar */
+    width: 100%;
+    padding: 15px;
+  }
+
+  /* Hero section */
+  .Two {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .search {
+    width: 100%;
+  }
+
+  .search input {
+    padding: 12px 45px;
+    font-size: 0.9rem;
+  }
+
+  /* Caregiver card */
+  .card {
+    flex-direction: column !important;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .card img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .card .text {
+    max-width: 100%;
+  }
+
+  .card .text h1 {
+    font-size: 1.3rem;
+  }
+
+  button {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
+
+  /* Footer responsive */
+  footer {
+    padding: 60px 20px 30px;
+    text-align: center;
+  }
+
+  footer h1 {
+    font-size: 1.6rem;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cta-btn {
+    padding: 12px 28px;
+    font-size: 1rem;
+  }
+}
+ 
+  

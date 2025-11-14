@@ -1,0 +1,365 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  background: #f5f9fc;
+  color: #2c3e50;
+}
+
+/* ===== SIDE NAVBAR (GLASS EFFECT) ===== */
+.sidebar {
+  width: 230px;
+  height: 100vh;
+  padding: 25px 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 10;
+
+  /* Mirror / Glass effect */
+  background: rgba(255, 255, 255, 0.18);
+  border-right: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(25px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+  box-shadow: 2px 0 25px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.logo::first-letter {
+  color: #5dbd73;
+}
+
+.nav-links {
+  list-style: none;
+  margin-top: 40px;
+}
+
+.nav-links li {
+  margin-bottom: 22px;
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background: #5dbd7320;
+  color: #0b8a68;
+}
+
+/* ===== HOVER PANELS ===== */
+.hover-panel {
+  display: none;
+  position: absolute;
+  left: 220px;
+  top: 0;
+  background: white;
+  width: 260px;
+  padding: 18px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  z-index: 100;
+}
+
+.hover-panel h4 {
+  margin-bottom: 10px;
+  color: #0b8a68;
+}
+
+.hover-panel p,
+.hover-panel li {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.nav-links li:hover .hover-panel {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== REGISTER BTN ===== */
+.register-btn {
+  background: #0b8a68;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.register-btn:hover {
+  background: #067d5b;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  margin-left: 260px;
+  padding: 40px;
+  flex: 1;
+}
+
+.hero {
+  background: #d3e3df;
+  padding: 40px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.hero img {
+  width: 280px;
+  border-radius: 12px;
+}
+
+.hero button {
+  margin-top: 15px;
+  background: white;
+  color: #0b8a68;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* ===== HEALTH TIPS SECTION ===== */
+.health-section {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.health-section h2 {
+  color: #0b8a68;
+  margin-bottom: 15px;
+}
+
+.tip-card {
+  background: #f5f9fc;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px 0;
+  transition: transform 0.3s ease;
+}
+
+.tip-card:hover {
+  transform: translateY(-5px);
+}
+
+.tip-card h4 {
+  color: #2c3e50;
+}
+
+.tip-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  position: relative;
+  padding: 80px 20px 40px;
+  color: green;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.footer-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.footer-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.12;
+}
+
+.footer-content {
+  position: relative;
+  z-index: 2;
+}
+
+footer h1 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: green;
+}
+
+.cta-btn {
+  background: green;
+  color: black;
+  padding: 14px 36px;
+  border: none;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  margin-bottom: 30px;
+  transition: 0.3s ease;
+  font-weight: bold;
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  margin: 30px 0;
+}
+
+.footer-links li a {
+  text-decoration: none;
+  color: green;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.footer-links li a:hover {
+  color: black;
+}
+
+.footer-contact p {
+  margin: 8px 0;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.copyright {
+  margin-top: 30px;
+  opacity: 0.8;
+  font-size: 0.9rem;
+  color: green;
+}
+/* ===================================================================
+   📱 MOBILE (0–600px)
+   - Sidebar → top
+   - Flex row → flex column
+   - Images small
+   - Main content full width
+=================================================================== */
+@media (max-width: 600px) {
+
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 15px 20px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    display: none; /* தேவையென்றால் toggle menu later செய்யலாம் */
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+    width: 100%;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .hero img {
+    width: 180px;
+  }
+
+  .health-section {
+    padding: 20px;
+  }
+
+  footer {
+    padding: 40px 20px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+
+  .sidebar {
+    width: 180px;
+    padding: 20px;
+  }
+
+  .main-content {
+    margin-left: 200px;
+    padding: 30px;
+  }
+
+  .hero img {
+    width: 230px;
+  }
+}
+
+
+/* ===================================================================
+   💻 DESKTOP (900px+)
+   - Original layout preserved
+=================================================================== */
+@media (min-width: 900px) {
+
+  .sidebar {
+    width: 230px;
+  }
+
+  .main-content {
+    margin-left: 260px;
+  }
+}
+

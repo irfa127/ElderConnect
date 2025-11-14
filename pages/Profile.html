@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ElderConnect | Profile</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        display: flex;
+        background-color: #f5f7fa;
+      }
+
+      /* Sidebar */
+      .sidebar {
+        width: 250px;
+        background-color: #fff;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        padding: 30px 20px;
+        border-right: 1px solid #eee;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .logo {
+        font-size: 22px;
+        font-weight: 700;
+        color: #0d9488;
+        margin-bottom: 40px;
+      }
+
+      .logo span {
+        color: #00796b;
+      }
+
+      .nav-links {
+        list-style: none;
+      }
+
+      .nav-links li {
+        margin: 20px 0;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 10px;
+        border-radius: 8px;
+        transition: 0.3s;
+      }
+
+      .nav-links a:hover {
+        background-color: #e0f2f1;
+        color: #0d9488;
+      }
+
+      .nav-links i {
+        font-size: 18px;
+      }
+
+      /* Main Content */
+      .main-content {
+        margin-left: 260px;
+        padding: 40px;
+        width: calc(100% - 260px);
+      }
+
+      .profile-container {
+        display: flex;
+        gap: 30px;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .profile-left {
+        text-align: center;
+        width: 280px;
+        border-right: 1px solid #eee;
+        padding-right: 20px;
+      }
+
+      .profile-left img {
+        width: 200px;
+        height: 150px;
+        border-radius: 15px;
+        object-fit: cover;
+      }
+
+      .profile-left h1 {
+        margin: 10px 0 5px;
+        color: #0d9488;
+        font-size: 24px;
+      }
+
+      .profile-left p {
+        color: #555;
+        margin-bottom: 15px;
+      }
+
+      .profile-left button {
+        background-color: #0d9488;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 500;
+      }
+
+      .profile-left button:hover {
+        background-color: #00796b;
+      }
+
+      .profile-right {
+        flex: 1;
+      }
+
+      .profile-right h1 {
+        color: #0d9488;
+        margin-bottom: 8px;
+      }
+
+      .profile-right p {
+        color: #666;
+        margin-bottom: 15px;
+      }
+
+      .boxe label {
+        font-weight: 500;
+        color: #333;
+      }
+
+      .boxe input {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0 15px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        outline: none;
+        transition: 0.3s;
+      }
+
+      .boxe input:focus {
+        border-color: #0d9488;
+        box-shadow: 0 0 4px #b2dfdb;
+      }
+
+      .boxe hr {
+        margin: 15px 0;
+        border: 0.5px solid #eee;
+      }
+
+      .boxe button {
+        background-color: #0d9488;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 500;
+      }
+
+      .boxe button:hover {
+        background-color: #00796b;
+      }
+
+       footer {
+  position: relative;
+  padding: 80px 20px 40px;
+  color: green;
+  text-align: center;
+  /* overflow: hidden; */
+  margin-top: 60px;
+}
+
+.footer-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.footer-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.12;
+}
+
+.footer-content {
+  position: relative;
+  z-index: 2;
+}
+
+footer h1 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: green;
+}
+
+.cta-btn {
+  background: green;
+  color: black;
+  padding: 14px 36px;
+  border: none;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  margin-bottom: 30px;
+  transition: 0.3s ease;
+  font-weight: bold;
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  margin: 30px 0;
+}
+
+.footer-links li a {
+  text-decoration: none;
+  color:green;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.footer-links li a:hover {
+  color:black;
+}
+
+.footer-contact p {
+  margin: 8px 0;
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.copyright {
+  margin-top: 30px;
+  opacity: 0.8;
+  font-size: 0.9rem;
+  color: green;
+}
+/* =========================
+   RESPONSIVE NAVBAR FIX
+   ========================= */
+
+@media (max-width: 768px) {
+
+  /* Body column layout */
+  body {
+    flex-direction: column;
+  }
+
+  /* Sidebar becomes TOP NAVBAR */
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  /* Logo center */
+  .logo {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  /* Nav links vertical */
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links li {
+    margin: 0;
+  }
+
+  .nav-links a {
+    width: 100%;
+    justify-content: center;
+    padding: 12px;
+  }
+
+  /* Main content full width */
+  .main-content {
+    margin-left: 0 !important;
+    width: 100% !important;
+    padding: 20px;
+  }
+
+  /* Profile section vertical */
+  .profile-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .profile-left {
+    width: 100%;
+    border-right: none;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .profile-left img {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .main-content {
+    padding: 15px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .profile-left img {
+    height: 180px;
+  }
+}
+
+    </style>
+  </head>
+
+  <body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div>
+        <div class="logo">Elder<span>Connect</span></div>
+        <ul class="nav-links">
+          <li><a href="Home.html"><i class="fas fa-home"></i>Home</a></li>
+          <li><a href="Bookcargiver.html"><i class="fas fa-user-nurse"></i>Caregiver</a></li>
+          <li><a href="Oldage.html"><i class="fas fa-house-user"></i>Old Age Homes</a></li>
+          <li><a href="Consoltion.html"><i class="fas fa-stethoscope"></i>Consultation</a></li>
+          <li><a href="Profile.html"><i class="fas fa-user"></i>Profile</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="profile-container">
+        <div class="profile-left">
+          <img
+            src="https://images.unsplash.com/photo-1697517874153-0384d16722fd?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=764"
+            alt="Profile"
+          />
+          <h1>John</h1>
+          <p>john@example.com</p>
+          <button>Change Picture</button>
+        </div>
+
+        <div class="profile-right">
+          <h1>Personal Information</h1>
+          <p>Fill the personal details here</p>
+          <div class="boxe">
+            <label for="name">Enter your name</label><br />
+            <input type="text" id="name" placeholder="Enter your name" /><br />
+
+            <label for="email">Enter your Email</label><br />
+            <input type="email" id="email" placeholder="Enter your email" />
+            <hr />
+
+            <label for="address">Enter your Address</label><br />
+            <input type="text" id="address" placeholder="Enter your address" /><br />
+
+            <label for="phone">Enter your Phone number</label><br />
+            <input type="text" id="phone" placeholder="Enter your phone number" /><br />
+
+            <label for="alt">Enter your Alternate number</label><br />
+            <input type="text" id="alt" placeholder="Enter your alternate number" />
+            <hr />
+
+            <button id="save">Save Details</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer>
+      <div class="footer-bg">
+        <img
+          src="../assets/vecteezy_four-older-adults-laughing-together_65704889.jpeg"
+          alt="Happy elders"
+        />
+      </div>
+      <div class="footer-content">
+        <h1>ElderConnect — Connecting Elders with Care</h1>
+        <button class="cta-btn">Get a Free Consultation Now</button>
+
+        <ul class="footer-links">
+          <li><a href="#">Quick Links</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Caregiver</a></li>
+          <li><a href="#">Senior Homes</a></li>
+          <li><a href="#">Community</a></li>
+        </ul>
+
+        <div class="footer-contact">
+          <p>🌐 www.ElderConnect.com</p>
+          <p>📞 +123 456 7890</p>
+          <p>📱 Follow us on Instagram | LinkedIn | Twitter</p>
+        </div>
+
+        <p class="copyright">
+          © 2025 ElderConnect – Caring for Elders, One Family at a Time
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nurse Attendance | ElderConnect</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="../style/attend.css">
+ 
+</head>
+<body>
+  <aside class="sidebar">
+    <h1>ElderConnect</h1>
+    <ul>
+      <li><a href="#"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+      <li><a href="#"><i class="fa-solid fa-user-nurse"></i> Attendance</a></li>
+      <li><a href="#"><i class="fa-solid fa-file-medical"></i> Reports</a></li>
+      <li><a href="#"><i class="fa-solid fa-cog"></i> Settings</a></li>
+    </ul>
+    <div class="sidebar-footer">© 2025 ElderConnect</div>
+  </aside>
+
+  <div class="main-content">
+    <h2>Mark Attendance & Health Info</h2>
+
+    <!-- Elder Card Example -->
+    <div class="elder-card">
+      <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Elder">
+      <div class="elder-info">
+        <h3>Meera</h3>
+        <p>Age: 72 | Old Age Home: GreenCare</p>
+        <div class="attendance">
+          <label>Attendance:</label>
+          <input type="radio" name="attendance1" value="present"> Present
+          <input type="radio" name="attendance1" value="absent"> Absent
+        </div>
+        <div class="tablet">
+          <label><input type="checkbox" name="tablet1"> Tablet Given</label>
+        </div>
+        <div class="meals">
+          <label><input type="checkbox" name="breakfast1"> Breakfast</label>
+          <label><input type="checkbox" name="lunch1"> Lunch</label>
+          <label><input type="checkbox" name="dinner1"> Dinner</label>
+        </div>
+        <div class="rating">
+          <label>Health Rating:</label>
+          <span class="stars">★★★★☆</span>
+        </div>
+        <div class="feedback">
+          <label>Feedback:</label>
+          <textarea rows="2" placeholder="Enter notes about health or behavior"></textarea>
+        </div>
+        <button class="submit-btn">Submit</button>
+      </div>
+    </div>
+
+    <!-- Duplicate Elder Card for more users -->
+    <div class="elder-card">
+      <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Elder">
+      <div class="elder-info">
+        <h3>Raman</h3>
+        <p>Age: 78 | Old Age Home: Serenity Haven</p>
+        <div class="attendance">
+          <label>Attendance:</label>
+          <input type="radio" name="attendance2" value="present"> Present
+          <input type="radio" name="attendance2" value="absent"> Absent
+        </div>
+        <div class="tablet">
+          <label><input type="checkbox" name="tablet2"> Tablet Given</label>
+        </div>
+        <div class="meals">
+          <label><input type="checkbox" name="breakfast2"> Breakfast</label>
+          <label><input type="checkbox" name="lunch2"> Lunch</label>
+          <label><input type="checkbox" name="dinner2"> Dinner</label>
+        </div>
+        <div class="rating">
+          <label>Health Rating:</label>
+          <span class="stars">★★★☆☆</span>
+        </div>
+        <div class="feedback">
+          <label>Feedback:</label>
+          <textarea rows="2" placeholder="Enter notes about health or behavior"></textarea>
+        </div>
+        <button class="submit-btn">Submit</button>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

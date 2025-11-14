@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment | ElderConnect</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style/payment.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h1 class="logo">Elder<span>Connect</span></h1>
+    <ul class="nav-links">
+      <li><a href="Home.html"><i class="fa-solid fa-house"></i>Home</a></li>
+      <li><a href="BookCaregiver.html"><i class="fa-solid fa-user-nurse"></i>Book Caregiver</a></li>
+      <li><a href="Oldage.html"><i class="fa-solid fa-building"></i>Old Age Homes</a></li>
+      <li><a href="Consultation.html"><i class="fa-solid fa-comments"></i>Consultation</a></li>
+      <li><a href="Profile.html"><i class="fa-solid fa-user"></i>Profile</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <section class="payment-container">
+      <div class="payment-card">
+        <h2>Complete Your Payment</h2>
+        <p class="summary-text">Confirm your booking and make a secure payment below.</p>
+
+        <div class="summary-box">
+          <div class="summary-item"><span>Caregiver:</span> <strong>Fathima</strong></div>
+          <div class="summary-item"><span>Service:</span> <strong>Daily Assistance</strong></div>
+          <div class="summary-item"><span>Duration:</span> <strong>2 Weeks</strong></div>
+          <div class="summary-item"><span>Total Amount:</span> <strong>₹5,000</strong></div>
+        </div>
+
+        <form class="payment-form">
+          <h3>Choose Payment Method</h3>
+          <div class="payment-options">
+            <label class="option">
+              <input type="radio" name="payment" checked>
+              <div class="option-box">
+                <i class="fa-solid fa-credit-card"></i>
+                <span>Credit / Debit Card</span>
+              </div>
+            </label>
+            <label class="option">
+              <input type="radio" name="payment">
+              <div class="option-box">
+                <i class="fa-brands fa-google-pay"></i>
+                <span>Google Pay</span>
+              </div>
+            </label>
+            <label class="option">
+              <input type="radio" name="payment">
+              <div class="option-box">
+                <i class="fa-brands fa-paypal"></i>
+                <span>PayPal</span>
+              </div>
+            </label>
+            <label class="option">
+              <input type="radio" name="payment">
+              <div class="option-box">
+                <i class="fa-solid fa-money-bill-wave"></i>
+                <span>Cash on Service</span>
+              </div>
+            </label>
+          </div>
+
+          <div class="card-details">
+            <div class="form-group">
+              <label>Cardholder Name</label>
+              <input type="text" placeholder="Enter full name" required>
+            </div>
+
+            <div class="form-group">
+              <label>Card Number</label>
+              <input type="text" maxlength="16" placeholder="xxxx xxxx xxxx xxxx" required>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group half">
+                <label>Expiry Date</label>
+                <input type="text" placeholder="MM/YY" required>
+              </div>
+              <div class="form-group half">
+                <label>CVV</label>
+                <input type="password" maxlength="3" placeholder="***" required>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="pay-btn">💳 Pay ₹5,000 Securely</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 ElderConnect. All rights reserved.</p>
+  </footer>
+</body>
+</html>

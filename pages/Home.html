@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ElderConnect Dashboard</title>
+
+    <!-- Fonts & Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style/Home.css" />
+
+    <!-- AOS Animation -->
+    <link
+      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ===== SIDE NAVBAR ===== -->
+    <div class="sidebar" data-aos="fade-right">
+      <div>
+        <h2 class="logo">ElderConnect</h2>
+        <ul class="nav-links">
+          <li>
+            <a href="#" class="active"><i class="fa-solid fa-house"></i> Home</a>
+          </li>
+
+          <li>
+            <a href="#"><i class="fa-solid fa-calendar-check"></i> Appointments</a>
+            <div class="hover-panel" data-aos="fade-left">
+              <h4>Upcoming Appointments</h4>
+              <p>👩‍⚕️ Nurse Mary – Nov 12, 10 AM</p>
+              <p>🎥 Dr. Sarah – Nov 14, 3 PM</p>
+              <p>🏥 Health Checkup – Nov 20</p>
+            </div>
+          </li>
+
+          <li>
+            <a href="#"><i class="fa-solid fa-bell"></i> Notifications</a>
+            <div class="hover-panel" data-aos="fade-left">
+              <h4>Recent Updates</h4>
+              <ul>
+                <li>3 new caregivers available</li>
+                <li>Health report uploaded</li>
+                <li>Reminder: Doctor visit tomorrow</li>
+                <li>Community event next week</li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <a href="./Bookcargiver.html"><i class="fa-solid fa-hand-holding-heart"></i> Caregiver</a>
+          </li>
+
+          <li>
+            <a href="./Oldage.html"><i class="fa-solid fa-building"></i> Old Age Homes</a>
+          </li>
+
+          <li>
+            <a href="./Profile.html"><i class="fa-solid fa-user"></i> Profile</a>
+          </li>
+        </ul>
+      </div>
+      <button class="register-btn">Register</button>
+    </div>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <div class="main-content">
+      <section class="hero" data-aos="fade-up">
+        <div class="hero-text">
+          <h2>Welcome to ElderConnect</h2>
+          <p>
+            Discover personalized health insights, wellness tips, and daily
+            inspiration crafted specially for elders.
+          </p>
+          <button>View Daily Care Plan</button>
+        </div>
+        <img
+          src="../assets/vecteezy_four-older-adults-laughing-together_65704889.jpeg"
+          alt="Elders"
+        />
+      </section>
+
+      <section class="health-section" data-aos="fade-up">
+        <h2>💚 Elder Health & Wellness Tips</h2>
+
+        <div class="tip-card" data-aos="fade-right">
+          <h4>1️⃣ Morning Movement</h4>
+          <p>Start your day with gentle yoga or 15-minute walks to improve flexibility and balance.</p>
+        </div>
+
+        <div class="tip-card" data-aos="fade-left">
+          <h4>2️⃣ Balanced Diet</h4>
+          <p>Include fruits, leafy greens, and calcium-rich foods to strengthen bones and immunity.</p>
+        </div>
+
+        <div class="tip-card" data-aos="fade-right">
+          <h4>3️⃣ Stay Hydrated</h4>
+          <p>Drink at least 8 glasses of water daily to maintain energy and prevent fatigue.</p>
+        </div>
+
+        <div class="tip-card" data-aos="fade-left">
+          <h4>4️⃣ Mind Wellness</h4>
+          <p>Engage in hobbies like reading, music, or puzzles to keep your mind active and happy.</p>
+        </div>
+
+        <div class="tip-card" data-aos="fade-up">
+          <h4>5️⃣ Regular Checkups</h4>
+          <p>Schedule medical checkups every 3 months to monitor blood pressure, sugar, and vision.</p>
+        </div>
+      </section>
+
+       <!-- ===== FOOTER ===== -->
+      <footer>
+        <div class="footer-bg">
+          <img
+            src="../assets/vecteezy_four-older-adults-laughing-together_65704889.jpeg"
+            alt="Happy elders"
+          />
+        </div>
+        <div class="footer-content">
+          <h1>ElderConnect — Connecting Elders with Care</h1>
+          <button class="cta-btn">Get a Free Consultation Now</button>
+
+          <ul class="footer-links">
+            <li><a href="#">Quick Links</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Caregiver</a></li>
+            <li><a href="#">Senior Homes</a></li>
+            <li><a href="#">Community</a></li>
+          </ul>
+
+          <div class="footer-contact">
+            <p>🌐 www.ElderConnect.com</p>
+            <p>📞 +123 456 7890</p>
+            <p>📱 Follow us on Instagram | LinkedIn | Twitter</p>
+          </div>
+
+          <p class="copyright">
+            © 2025 ElderConnect – Caring for Elders, One Family at a Time
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- ===== AOS Script ===== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    </script>
+  </body>
+</html>

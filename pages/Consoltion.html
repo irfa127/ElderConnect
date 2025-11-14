@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ElderConnect - Consultation</title>
+
+    <!-- Fonts & Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../style/Consolotion.css">
+  </head>
+
+  <body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div>
+        <h1>ElderConnect</h1>
+        <ul class="nav-links">
+          <li><a href="Home.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="Bookcargiver.html"><i class="fa-solid fa-user-nurse"></i>Book Caregiver</a></li>
+          <li><a href="Oldage.html"><i class="fa-solid fa-building"></i>Old Age Homes</a></li>
+          <li><a href="Consoltion.html" style="color: var(--primary);"><i class="fa-solid fa-stethoscope"></i>Consultation</a></li>
+          <li><a href="Profile.html"><i class="fa-solid fa-user"></i>Profile</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-footer">© 2025 ElderConnect</div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <section class="search-section">
+        <div class="search-container">
+          <input type="search" class="search-input" placeholder="Search Services..." />
+          <i class="fas fa-search search-icon"></i>
+        </div>
+      </section>
+
+      <section class="intro-section">
+        <h2 class="section-title">Medical Consultation</h2>
+        <p class="section-description">Connect with specialists via video or voice calls</p>
+      </section>
+
+      <!-- Doctors Grid -->
+      <section class="doctors-grid">
+        <article class="doctor-card">
+          <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop" class="doctor-image" />
+          <div class="doctor-info">
+            <h3 class="doctor-name">Dr. Sarah Johnson</h3>
+            <p class="doctor-specialty">Cardiologist</p>
+            <button class="call-btn video-btn"><i class="fas fa-video"></i> Video Call</button>
+            <button class="call-btn audio-btn"><i class="fas fa-phone"></i> Audio Call</button>
+          </div>
+        </article>
+
+        <article class="doctor-card">
+          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop" class="doctor-image" />
+          <div class="doctor-info">
+            <h3 class="doctor-name">Dr. Michael Chen</h3>
+            <p class="doctor-specialty">Dentist</p>
+            <button class="call-btn video-btn"><i class="fas fa-video"></i> Video Call</button>
+            <button class="call-btn audio-btn"><i class="fas fa-phone"></i> Audio Call</button>
+          </div>
+        </article>
+
+        <article class="doctor-card">
+          <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=400&fit=crop" class="doctor-image" />
+          <div class="doctor-info">
+            <h3 class="doctor-name">Dr. Emily Martinez</h3>
+            <p class="doctor-specialty">Neurologist</p>
+            <button class="call-btn video-btn"><i class="fas fa-video"></i> Video Call</button>
+            <button class="call-btn audio-btn"><i class="fas fa-phone"></i> Audio Call</button>
+          </div>
+        </article>
+
+        <article class="doctor-card">
+          <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=400&fit=crop" class="doctor-image" />
+          <div class="doctor-info">
+            <h3 class="doctor-name">Dr. James Wilson</h3>
+            <p class="doctor-specialty">Orthopedic</p>
+            <button class="call-btn video-btn"><i class="fas fa-video"></i> Video Call</button>
+            <button class="call-btn audio-btn"><i class="fas fa-phone"></i> Audio Call</button>
+          </div>
+        </article>
+      </section>
+
+      <!-- Medical Reports Section -->
+<section class="medical-reports">
+  <div class="reports-container">
+    <h2 class="reports-title">Medical Reports</h2>
+    <p class="reports-description">
+      Manage and view your uploaded health reports conveniently before consultation.
+    </p>
+
+    <!-- Upload Section -->
+    <div class="upload-section">
+      <label for="file-upload" class="upload-label">
+        <i class="fas fa-cloud-upload-alt upload-icon"></i>
+        <span>Upload New Report</span>
+      </label>
+      <input type="file" id="file-upload" class="file-input" accept=".pdf,.doc,.docx,.jpg,.png">
+    </div>
+
+    <!-- Reports Cards -->
+    <div class="reports-grid">
+      <div class="report-card">
+        <i class="fas fa-file-pdf report-icon" style="color:#e11d48;"></i>
+        <div class="report-info">
+          <h3 class="report-name">Blood Test Report.pdf</h3>
+          <p class="report-date">Uploaded on: 25 Oct 2025</p>
+        </div>
+        <div class="report-actions">
+          <button class="view-btn"><i class="fas fa-eye"></i></button>
+          <button class="delete-btn"><i class="fas fa-trash"></i></button>
+        </div>
+      </div>
+
+      <div class="report-card">
+        <i class="fas fa-file-medical report-icon" style="color:#2563eb;"></i>
+        <div class="report-info">
+          <h3 class="report-name">X-Ray Result.jpg</h3>
+          <p class="report-date">Uploaded on: 28 Oct 2025</p>
+        </div>
+        <div class="report-actions">
+          <button class="view-btn"><i class="fas fa-eye"></i></button>
+          <button class="delete-btn"><i class="fas fa-trash"></i></button>
+        </div>
+      </div>
+
+      <div class="report-card">
+        <i class="fas fa-file-word report-icon" style="color:#16a34a;"></i>
+        <div class="report-info">
+          <h3 class="report-name">Doctor Prescription.docx</h3>
+          <p class="report-date">Uploaded on: 30 Oct 2025</p>
+        </div>
+        <div class="report-actions">
+          <button class="view-btn"><i class="fas fa-eye"></i></button>
+          <button class="delete-btn"><i class="fas fa-trash"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <footer>
+      <div class="footer-bg">
+        <img
+          src="../assets/vecteezy_four-older-adults-laughing-together_65704889.jpeg"
+          alt="Happy elders"
+        />
+      </div>
+      <div class="footer-content">
+        <h1>ElderConnect — Connecting Elders with Care</h1>
+        <button class="cta-btn">Get a Free Consultation Now</button>
+
+        <ul class="footer-links">
+          <li><a href="#">Quick Links</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Caregiver</a></li>
+          <li><a href="#">Senior Homes</a></li>
+          <li><a href="#">Community</a></li>
+        </ul>
+
+        <div class="footer-contact">
+          <p>🌐 www.ElderConnect.com</p>
+          <p>📞 +123 456 7890</p>
+          <p>📱 Follow us on Instagram | LinkedIn | Twitter</p>
+        </div>
+
+        <p class="copyright">
+          © 2025 ElderConnect – Caring for Elders, One Family at a Time
+        </p>
+      </div>
+    </footer>
+    </main>
+  </body>
+</html>

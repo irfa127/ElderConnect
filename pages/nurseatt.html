@@ -1,0 +1,86 @@
+<!-- User Feedback to Nurse Widget -->
+<div class="user-feedback-widget">
+  <h3>Give Feedback to Nurse</h3>
+  <form>
+    <label for="nurse">Select Nurse:</label>
+    <select id="nurse" required>
+      <option value="">Choose Nurse</option>
+      <option value="priya">Priya</option>
+      <option value="kavya">Kavya</option>
+      <option value="anitha">Anitha</option>
+    </select>
+
+    <label for="attendance">Attendance:</label>
+    <select id="attendance" required>
+      <option value="">Select Status</option>
+      <option value="present">✅ Present</option>
+      <option value="absent">❌ Absent</option>
+    </select>
+
+    <label for="rating">Rating:</label>
+    <select id="rating" required>
+      <option value="">Rate 1-5</option>
+      <option value="1">★☆☆☆☆</option>
+      <option value="2">★★☆☆☆</option>
+      <option value="3">★★★☆☆</option>
+      <option value="4">★★★★☆</option>
+      <option value="5">★★★★★</option>
+    </select>
+
+    <label for="feedback-text">Feedback (optional):</label>
+    <textarea id="feedback-text" placeholder="Write a short note..."></textarea>
+
+    <button type="submit">Submit Feedback</button>
+  </form>
+</div>
+
+<style>
+.user-feedback-widget {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  width: 280px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.user-feedback-widget h3 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.user-feedback-widget form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.user-feedback-widget select,
+.user-feedback-widget textarea {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+}
+
+.user-feedback-widget textarea {
+  resize: none;
+  height: 60px;
+}
+
+.user-feedback-widget button {
+  background-color: #5dbd73;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.user-feedback-widget button:hover {
+  background-color: #4ba562;
+}
+</style>

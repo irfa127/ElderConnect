@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      div {
+        width: 40px;
+        height: 30px;
+        background-color: blue;
+        position: relative;
+        top: 200px;
+        left: 400px;
+        border-radius: 20px;
+        animation: top_motion infinite alternate 1s;
+        box-shadow: 2px 2px 7px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: x-large;
+        font-family: sans-serif;
+        color: #ffffff;
+      }
+      @keyframes top_motion{
+        0%{
+            transform: translateY(3px);
+        }
+        100%{
+            transform: translateY(10px);
+        }
+      }
+    </style>
+    <div>E</div>
+  </body>
+</html>

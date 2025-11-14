@@ -1,0 +1,233 @@
+
+:root {
+  --primary: #5dbd73;           
+  --primary-dark: #4a9a5d;      
+  --secondary: #2c3e50;        
+  --accent: #e67e22;            
+  --light: #f8f9fa;             
+  --gray: #6c757d;              
+  --shadow: 0 4px 20px rgba(0,0,0,0.08); 
+  --border-radius: 16px;  }      
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+  display: flex;
+  min-height: 100vh;
+  color: var(--secondary);
+}
+
+/*  Sidebar Styling  */
+.sidebar {
+  width: 240px;
+  background: rgb(234, 240, 241);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 25px 20px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.sidebar h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--secondary);
+  margin-bottom: 40px;
+}
+
+.sidebar h1 span {
+  color: var(--primary);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--gray);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: var(--primary);
+  background-color: #eaf7ec;
+}
+
+/*  Main Content Styling */
+.main-content {
+  margin-left: 260px; 
+  padding: 40px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Booking Container */
+.booking-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 20px;
+  align-items: flex-start;
+  flex-grow: 1;
+}
+
+/* Caregiver Card */
+.caregiver-card {
+  flex: 1;
+  min-width: 320px;
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 30px;
+  text-align: center;
+}
+
+.caregiver-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  overflow: hidden;
+  border: 3px solid var(--primary);
+}
+
+.caregiver-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.caregiver-name {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.caregiver-exp {
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.caregiver-rating {
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+
+.caregiver-desc {
+  color: var(--gray);
+  line-height: 1.7;
+}
+
+.caregiver-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.feature {
+  background: rgba(93,189,115,0.1);
+  color: var(--primary-dark);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/*Booking Form Styling  */
+.booking-form {
+  flex: 1.5;
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 40px;
+}
+
+.form-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  text-align: center;
+  color: var(--secondary);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-control {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid #e1e5eb;
+  border-radius: 12px;
+  font-size: 1rem;
+  /* transition: 0.3s; */
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(93,189,115,0.2);
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-half {
+  flex: 1;
+}
+
+.submit-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 16px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: block;
+  margin: 25px auto 0;
+  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(93,189,115,0.4);
+}
+
+.submit-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}

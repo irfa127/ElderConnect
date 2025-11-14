@@ -1,0 +1,185 @@
+
+:root {
+  --primary: #5dbd73;           /* Main theme color (green) */
+  --bg-light: #f9fafb;          /* Background color for page */
+  --text-dark: #2c3e50;         /* Dark text color */
+  --text-gray: #555;            /* Gray text for secondary info */
+  --white: #fff;                /* White color */
+  --shadow: 0 6px 20px rgba(0,0,0,0.06); /* Soft shadow for cards & sidebar */
+}
+
+/* Reset and default font */
+* { 
+  margin:0; 
+  padding:0; 
+  box-sizing:border-box; 
+  font-family:'Poppins',sans-serif; 
+}
+
+/* Body layout */
+body { 
+  display:flex;             /* Sidebar + main content side by side */
+  min-height:100vh;         /* Full viewport height */
+  background:var(--bg-light); /* Page background color */
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 220px;                  /* Fixed width */
+  background:var(--white);       /* White sidebar */
+  box-shadow:var(--shadow);      /* Slight shadow */
+  display:flex; 
+  flex-direction:column;         /* Vertical stacking of elements */
+  justify-content:space-between; /* Space between menu and footer */
+  position:fixed; 
+  top:0; bottom:0; left:0;       /* Fixed to left side */
+  padding:20px;                  /* Padding inside sidebar */
+}
+
+.sidebar h1 { 
+  color:var(--primary); 
+  font-size:1.5rem; 
+  margin-bottom:30px; 
+  text-align:center; 
+}
+
+/* Sidebar menu links */
+.sidebar ul { 
+  list-style:none; 
+  display:flex; 
+  flex-direction:column; 
+  gap:15px; 
+  position: relative;
+  bottom: 260px;
+}
+
+.sidebar ul li a { 
+  text-decoration:none; 
+  color:var(--text-gray); 
+  font-weight:600; 
+  padding:10px; 
+  border-radius:8px; 
+  display:flex; 
+  align-items:center; 
+  gap:10px; 
+  transition:0.3s; /* Smooth hover effect */
+}
+
+.sidebar ul li a:hover { 
+  background:#eaf7ec; 
+  color:var(--primary); 
+}
+
+/* Sidebar footer */
+.sidebar-footer { 
+  text-align:center; 
+  font-size:0.85rem; 
+  color:var(--text-gray); 
+  margin-top:20px; 
+}
+
+/* Main content styling */
+.main-content { 
+  margin-left:240px;       /* Leave space for sidebar */
+  flex:1; 
+  padding:30px; 
+}
+
+.main-content h2 { 
+  color:var(--text-dark); 
+  margin-bottom:20px; 
+}
+
+/* Elder card container */
+.elder-card { 
+  background:var(--white); 
+  box-shadow:var(--shadow); 
+  border-radius:15px; 
+  padding:20px; 
+  margin-bottom:20px; 
+  display:flex; 
+  gap:20px; 
+  align-items:center; 
+  flex-wrap:wrap;            /* Wrap on smaller screens */
+}
+
+/* Elder image */
+.elder-card img { 
+  width:100px; 
+  height:100px; 
+  object-fit:cover; 
+  border-radius:50%; 
+  border:3px solid var(--primary); 
+}
+
+/* Elder info container */
+.elder-info { 
+  flex:1; 
+}
+
+.elder-info h3 { 
+  color:var(--text-dark); 
+  margin-bottom:5px; 
+}
+
+.elder-info p { 
+  color:var(--text-gray); 
+  margin-bottom:5px; 
+}
+
+/* Sections inside elder card */
+.attendance, .meals, .tablet, .rating, .feedback { 
+  margin-top:10px; 
+}
+
+/* Labels */
+label { 
+  margin-right:10px; 
+  font-weight:500; 
+}
+
+/* Checkboxes */
+input[type="checkbox"] { 
+  margin-right:5px; 
+}
+
+/* Star ratings */
+.stars { 
+  color:gold; 
+}
+
+/* Feedback text area */
+textarea { 
+  width:100%; 
+  padding:10px; 
+  border-radius:8px; 
+  border:1px solid #ccc; 
+  resize:none; 
+}
+
+/* Submit button */
+.submit-btn { 
+  background:var(--primary); 
+  color:white; 
+  padding:10px 20px; 
+  border:none; 
+  border-radius:20px; 
+  cursor:pointer; 
+  margin-top:10px; 
+  transition:0.3s; 
+}
+
+.submit-btn:hover { 
+  background:#4ba562; 
+}
+
+/* Responsive layout for tablets and mobile */
+@media (max-width:768px){ 
+  .main-content { 
+    padding:15px; 
+  } 
+  .elder-card { 
+    flex-direction:column; 
+    align-items:flex-start; 
+  } 
+}

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ElderConnect - Old Age Homes</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      :root {
+        --primary: #5dbd73;
+        --text-dark: #2c3e50;
+        --text-gray: #555;
+        --bg-light: #f9fafb;
+        --white: #ffffff;
+        --shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: var(--bg-light);
+        color: var(--text-dark);
+        display: flex;
+        min-height: 100vh;
+      }
+
+      /* Sidebar */
+      .sidebar {
+        width: 240px;
+        background: var(--white);
+        box-shadow: var(--shadow);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        padding: 20px;
+      }
+
+      .sidebar h1 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+        color: var(--text-dark);
+      }
+
+      .sidebar h1::first-letter {
+        color: var(--primary);
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .nav-links li a {
+        text-decoration: none;
+        color: var(--text-gray);
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transition: 0.3s;
+        padding: 10px;
+        border-radius: 10px;
+      }
+
+      .nav-links li a:hover {
+        color: var(--primary);
+        background-color: #eaf7ec;
+      }
+
+      .sidebar-footer {
+        font-size: 0.9rem;
+        color: var(--text-gray);
+        text-align: center;
+        padding-top: 10px;
+      }
+
+      /* Main Content */
+      .main-content {
+        margin-left: 260px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+      }
+
+      .page-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      .page-description {
+        text-align: center;
+        color: var(--text-gray);
+        margin-bottom: 40px;
+      }
+
+      .homes-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+
+      .home-card {
+        background: var(--white);
+        border-radius: 20px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        transition: transform 0.3s;
+      }
+
+      .home-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .home-image-wrapper {
+        position: relative;
+      }
+
+      .home-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .home-badge {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        background: var(--primary);
+        color: white;
+        font-size: 0.8rem;
+        padding: 6px 12px;
+        border-radius: 8px;
+      }
+
+      .home-content {
+        padding: 20px;
+      }
+
+      .home-name {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+      }
+
+      .home-location {
+        color: var(--text-gray);
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+      }
+
+      .home-description {
+        font-size: 0.9rem;
+        color: var(--text-gray);
+        margin-bottom: 15px;
+      }
+
+      .home-amenities {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 15px;
+      }
+
+      .amenity-tag {
+        background: #eaf7ec;
+        color: var(--text-dark);
+        padding: 6px 10px;
+        border-radius: 8px;
+        font-size: 0.85rem;
+      }
+
+      .home-actions {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .btn-primary {
+        background-color: var(--primary);
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 25px;
+        cursor: pointer;
+        font-weight: 600;
+      }
+
+      .btn-secondary {
+        background-color: transparent;
+        border: 2px solid var(--primary);
+        color: var(--primary);
+        padding: 8px 16px;
+        border-radius: 25px;
+        cursor: pointer;
+        font-weight: 600;
+      }
+
+      .btn-primary:hover {
+        background-color: #4ba562;
+      }
+
+      .btn-secondary:hover {
+        background-color: var(--primary);
+        color: white;
+      }
+
+       footer {
+  position: relative;
+  padding: 80px 20px 40px;
+  color: green;
+  text-align: center;
+  /* overflow: hidden; */
+  margin-top: 60px;
+}
+
+.footer-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.footer-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.12;
+}
+
+.footer-content {
+  position: relative;
+  z-index: 2;
+}
+
+footer h1 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: green;
+}
+
+.cta-btn {
+  background: green;
+  color: black;
+  padding: 14px 36px;
+  border: none;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  margin-bottom: 30px;
+  transition: 0.3s ease;
+  font-weight: bold;
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  margin: 30px 0;
+}
+
+.footer-links li a {
+  text-decoration: none;
+  color:green;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.footer-links li a:hover {
+  color:black;
+}
+
+.footer-contact p {
+  margin: 8px 0;
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.copyright {
+  margin-top: 30px;
+  opacity: 0.8;
+  font-size: 0.9rem;
+  color: green;
+}
+    </style>
+  </head>
+
+  <body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div>
+        <h1>ElderConnect</h1>
+        <ul class="nav-links">
+          <li><a href="#"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="Bookcargiver.html"><i class="fa-solid fa-user-nurse"></i>Book Caregiver</a></li>
+          <li><a href="Oldage.html"><i class="fa-solid fa-building"></i>Old Age Home</a></li>
+          <li><a href="Consoltion.html"><i class="fa-solid fa-comments"></i>Consultation</a></li>
+          <li><a href="attendence.html"><i class="fa-solid fa-user"></i>Attendance</a></li>
+          <li><a href="Profile.html"><i class="fa-solid fa-user"></i>Profile</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-footer">© 2025 ElderConnect</div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <h2 class="page-title">Find Your Perfect Senior Living Community</h2>
+      <p class="page-description">
+        Comfortable, caring environments where elders thrive with dignity and joy.
+      </p>
+
+      <div class="homes-grid">
+        <!-- Home 1 -->
+        <article class="home-card">
+          <div class="home-image-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1558036117-15d82a90b9b1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Sunrise Senior Living"
+              class="home-image"
+            />
+            <div class="home-badge">Featured</div>
+          </div>
+          <div class="home-content">
+            <h3 class="home-name">Sunrise Senior Living</h3>
+            <p class="home-location">
+              <i class="fas fa-map-marker-alt"></i> T. Nagar, Chennai
+            </p>
+            <p class="home-description">
+              A peaceful sanctuary offering comprehensive care and a vibrant community for elders.
+            </p>
+            <div class="home-amenities">
+              <span class="amenity-tag"><i class="fas fa-heartbeat"></i> 24/7 Medical</span>
+              <span class="amenity-tag"><i class="fas fa-spa"></i> Yoga & Meditation</span>
+              <span class="amenity-tag"><i class="fas fa-leaf"></i> Green Garden</span>
+            </div>
+            <div class="home-actions">
+              <button class="btn-primary"><a href="oldagebooking.html" style="text-decoration: none; color: white;">View Details</a></button>
+              <!-- <button class="btn-secondary">Book Tour</button> -->
+            </div>
+          </div>
+        </article>
+
+        <!-- Home 2 -->
+        <article class="home-card">
+          <div class="home-image-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&h=500&fit=crop"
+              alt="Golden Years Retreat"
+              class="home-image"
+            />
+            <div class="home-badge">Premium</div>
+          </div>
+          <div class="home-content">
+            <h3 class="home-name">Golden Years Retreat</h3>
+            <p class="home-location">
+              <i class="fas fa-map-marker-alt"></i> Adyar, Chennai
+            </p>
+            <p class="home-description">
+              Luxury senior living with world-class facilities and gourmet dining.
+            </p>
+            <div class="home-amenities">
+              <span class="amenity-tag"><i class="fas fa-user-md"></i> Specialist Care</span>
+              <span class="amenity-tag"><i class="fas fa-swimming-pool"></i> Pool</span>
+              <span class="amenity-tag"><i class="fas fa-utensils"></i> Dining</span>
+            </div>
+            <div class="home-actions">
+              <button class="btn-primary"><a href="oldagebooking.html" style="text-decoration: none; color: white;">View Details</a></button>
+              <!-- <button class="btn-secondary">Book Tour</button> -->
+            </div>
+          </div>
+        </article>
+
+        <!-- Home 3 -->
+        <article class="home-card">
+          <div class="home-image-wrapper">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1689609950071-af404daa58a0?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Peaceful Haven"
+              class="home-image"
+            />
+            <div class="home-badge">New</div>
+          </div>
+          <div class="home-content">
+            <h3 class="home-name">Peaceful Haven</h3>
+            <p class="home-location">
+              <i class="fas fa-map-marker-alt"></i> Velachery, Chennai
+            </p>
+            <p class="home-description">
+              Modern assisted living with compassionate staff and therapeutic programs.
+            </p>
+            <div class="home-amenities">
+              <span class="amenity-tag"><i class="fas fa-wheelchair"></i> Mobility Support</span>
+              <span class="amenity-tag"><i class="fas fa-book-reader"></i> Library</span>
+              <span class="amenity-tag"><i class="fas fa-theater-masks"></i> Cultural</span>
+            </div>
+            <div class="home-actions">
+              <button class="btn-primary"><a href="oldagebooking.html" style="text-decoration: none; color: white;">View Details</a></button>
+              <!-- <button class="btn-secondary">Book Tour</button> -->
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <footer>
+      <div class="footer-bg">
+        <img
+          src="../assets/vecteezy_four-older-adults-laughing-together_65704889.jpeg"
+          alt="Happy elders"
+        />
+      </div>
+      <div class="footer-content">
+        <h1>ElderConnect — Connecting Elders with Care</h1>
+        <button class="cta-btn">Get a Free Consultation Now</button>
+
+        <ul class="footer-links">
+          <li><a href="#">Quick Links</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Caregiver</a></li>
+          <li><a href="#">Senior Homes</a></li>
+          <li><a href="#">Community</a></li>
+        </ul>
+
+        <div class="footer-contact">
+          <p>🌐 www.ElderConnect.com</p>
+          <p>📞 +123 456 7890</p>
+          <p>📱 Follow us on Instagram | LinkedIn | Twitter</p>
+        </div>
+
+        <p class="copyright">
+          © 2025 ElderConnect – Caring for Elders, One Family at a Time
+        </p>
+      </div>
+    </footer>
+    </div>
+  </body>
+</html>

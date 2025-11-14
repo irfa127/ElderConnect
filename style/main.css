@@ -6,7 +6,7 @@
   --text-dark: #2c3e50;
   --text-gray: #555;
   --bg-light: #f9fafb;
-  --white: #ffffff;
+  --white: #ffffff22;
   --shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
 }
 
@@ -21,11 +21,31 @@ body {
   background-color: var(--bg-light);
   color: var(--text-dark);
   overflow-x: hidden;
+  animation: 20s change infinite linear;
+
+}
+@keyframes change {
+  0%{
+    background-color: #43a04888;
+  }
+  25%{
+    background-color: rgba(222, 184, 135, 0.667);
+  }
+  50%{
+    background-color: rgba(56, 56, 120, 0.596);
+  }
+  75%{
+    background-color: white;
+  }
+  100%{
+    background-color: rgba(139, 84, 45, 0.619);
+  }
+  
 }
 
-/* ===== HEADER ===== */
+
 header {
-  background: var(--white);
+  background-color: #f0fff4;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -48,6 +68,7 @@ h1::first-letter {
   color: var(--primary);
 }
 
+
 .navbar {
   display: flex;
   list-style: none;
@@ -65,9 +86,9 @@ h1::first-letter {
   transition: color 0.3s;
 }
 
-.navbar a:hover {
-  color: var(--primary);
-}
+/* .navbar li:hover {
+  color: green;
+} */
 
 hr {
   border: 0;
@@ -78,7 +99,7 @@ hr {
 li::first-letter{
 color: #5dbd73;
 }
-/* ===== HERO SECTION ===== */
+
 .hero-section {
   padding: 80px 0;
   background: var(--white);
@@ -229,7 +250,11 @@ color: #5dbd73;
   font-size: 1rem;
 }
 
-/* Steps */
+.re-btn a{
+  text-decoration: none;
+  color: black;
+}
+
 .steps {
   display: flex;
   flex-wrap: wrap;
@@ -261,7 +286,34 @@ color: #5dbd73;
   color: #2c3e50;
 }
 
+.re-btn{
+  margin: 5%;
+  margin-left: 40%;
+  margin-bottom: 20px;
+  
+  
+}
+button{
+ 
+  background: #5dbd73;
+  color: black;
+  border: none;
+  padding: 14px 36px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+ border: 1px,solid ,black;
+ 
+}
 
+.le-btn a{
+  text-decoration: none;
+  color: black;
+}
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -281,7 +333,7 @@ color: #5dbd73;
   animation-range: entry 10% cover 30%;
 }
 
-/* Safari support */
+
 @supports (-webkit-animation-timeline: view()) {
   .animate-on-scroll {
     -webkit-animation: fadeInUp linear forwards;
@@ -290,23 +342,9 @@ color: #5dbd73;
   }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 1.8rem;
-  }
 
-  .card-grid,
-  .steps {
-    gap: 20px;
-  }
 
-  .card, .step {
-    padding: 20px;
-  }
-}
 
-/* PURE CSS SCROLL ANIMATION */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -328,7 +366,6 @@ color: #5dbd73;
 }
 
 
-/* ===== FOOTER STYLING ===== */
 footer {
   position: relative;
   padding: 80px 20px 40px;
@@ -337,7 +374,7 @@ footer {
   overflow: hidden;
 }
 
-/* Background Image with Opacity */
+
 .footer-bg {
   position: absolute;
   top: 0;
@@ -351,20 +388,22 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.12; /* Very subtle — readable text on top */
+  opacity: 0.12; 
 }
 
-/* Content on top of image */
+
 .footer-content {
   position: relative;
   z-index: 2;
   max-width: 1000px;
-  margin: 0 auto;
+  margin:  auto;
   text-align: center;
-  padding: 0 20px;
+  padding: 20px;
+ 
 }
 
 footer h1 {
+  
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 25px;
@@ -399,6 +438,7 @@ footer h1 {
   list-style: none;
   margin: 30px 0;
   padding: 0;
+  
 }
 
 .footer-links li a {
@@ -433,26 +473,107 @@ footer h1 {
   color: #2c3e50;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+button get :start
+.re-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0;
+}
+
+.le-btn {
+  background: linear-gradient(135deg, #4CAF50, #81C784);
+  color: white;
+  border: none;
+  padding: 18px 60px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3);
+  animation: pulse 2.5s infinite ease-in-out;
+}
+
+.le-btn:hover {
+  background: linear-gradient(135deg, #43A047, #66BB6A);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(76, 175, 80, 0.4);
+}
+
+.le-btn a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Soft glowing animation for button */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(93, 189, 115, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(93, 189, 115, 0.6);
+  }
+}
+/* ================================
+   📌 MOBILE (max-width: 480px)
+   ================================ */
+@media (max-width: 480px) {
+
+  /* HERO SECTION */
+  .hero-grid {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  /* CARDS */
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* STEPS */
+  .steps {
+    flex-direction: column;
+  }
+
+  /* BUTTON */
+  .le-btn {
+    width: 90%;
+  }
+
+  /* FOOTER */
   footer h1 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 
   .footer-links {
-    gap: 12px;
     flex-direction: column;
-    align-items: center;
+    gap: 12px;
   }
 
-  .footer-contact p {
-    font-size: 0.95rem;
+  .re-btn {
+    margin-left: 0;
   }
 }
 
-/* ===== RESPONSIVE ===== */
+
+
+/* ================================
+   📌 TABLET (481px – 768px)
+   ================================ */
 @media (max-width: 768px) {
-  .main {
+
+  header .main {
     flex-direction: column;
     gap: 15px;
   }
@@ -462,17 +583,63 @@ footer h1 {
     text-align: center;
   }
 
-  .hero-buttons {
+  .hero-text h1 {
+    font-size: 2.4rem;
+  }
+
+  /* Cards */
+  .card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .steps {
     justify-content: center;
   }
 
-  .footer-container {
-    gap: 30px;
+  /* Footer */
+  footer h1 {
+    font-size: 1.6rem;
   }
 
-  .footer-bottom {
-    margin-top: 40px;
+  .footer-links {
+    gap: 15px;
+  }
+
+  .footer-content {
+    padding: 10px;
+  }
+
+  .re-btn {
+    margin-left: 0;
   }
 }
+
+
+
+/* ================================
+   📌 SMALL LAPTOP (769px – 1024px)
+   ================================ */
+@media (max-width: 1024px) {
+
+  .hero-text h1 {
+    font-size: 2.6rem;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .steps {
+    gap: 20px;
+  }
+
+  footer h1 {
+    font-size: 1.8rem;
+  }
+}
+
+
+
+
 
 
